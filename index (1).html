@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>homelab-cable</title>
+        <link href="https://fonts.cdnfonts.com/css/digital-7-mono" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css"/>
+        <script src="https://unpkg.com/htmx.org@1.9.7"></script>
+    </head>
+    <body>
+        <section class="rack">
+            <article class="appliance">
+                <div class="logo" hx-get="/htmx/meta" hx-swap="innerHTML" hx-trigger="load">
+                </div>
+                <div id="status-holder">
+                    <div id="status-lcd" class="led led-off" hx-get="/htmx/status" hx-trigger="load" hx-swap="outerHTML">
+                        88888888888888
+                    </div>
+                </div>
+                <div id="play-next">
+                    <button hx-put="/htmx/live/next" hx-swap="none" class="metal linear small">></button>
+                </div>
+            </article>
+        </section>
+    </body>
+</html>
