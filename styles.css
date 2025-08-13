@@ -368,14 +368,3 @@ div#status-lcd > span {
         margin-bottom: 10px;
     }
 }
-/* Top-right branding */
-            .branding {
-                position: absolute;
-                top: 10px;
-                right: 10px;
-                font-family: 'Digital-7 Mono', monospace;
-                font-size: 1.2rem;
-                color: #00ff00; /* neon green vibe */
-            }
-            /* make sure rack content is not affected by absolute positioning */
-            body { position: relative; margin: 0; padding: 0; }
