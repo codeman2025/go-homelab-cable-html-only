@@ -367,4 +367,25 @@ div#status-lcd > span {
         width: 80%;
         margin-bottom: 10px;
     }
+    /* Branding centered at the top */
+.branding {
+    display: block;
+    width: 100%;
+    font-family: 'Digital-7 Mono', monospace;
+    font-size: 2rem;
+    color: #ffffff;
+    background: #222;
+    padding: 16px 0;
+    border-radius: 8px;
+    text-align: center;
+    margin: 40px 0 24px 0; /* 40px from top, 24px below */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+}
+
+/* Make sure rack content is not affected by absolute positioning */
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
 }

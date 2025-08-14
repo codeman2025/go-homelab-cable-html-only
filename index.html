@@ -1,40 +1,28 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>homelab-cable</title>
+        <title>CLABRETRO CABLE INC.</title>
         <link href="https://fonts.cdnfonts.com/css/digital-7-mono" rel="stylesheet">
         <link rel="stylesheet" href="styles.css"/>
         <script src="https://unpkg.com/htmx.org@1.9.7"></script>
     </head>
-    <style>
-        /* Top-right branding */
-            .branding {
-                position: absolute;
-                top: 10px;
-                right: 10px;
-                font-family: 'Digital-7 Mono', monospace;
-                font-size: 1.2rem;
-                color: #00ff00; /* neon green vibe */
-            }
-            /* make sure rack content is not affected by absolute positioning */
-            body { position: relative; margin: 0; padding: 0; }
-
-    </style>
     <body>
-        <div class="branding">CLABRETRO CABLE INC.</div>
-        <section class="rack">
-            <article class="appliance">
-                <div class="logo" hx-get="/htmx/meta" hx-swap="innerHTML" hx-trigger="load">
-                </div>
-                <div id="status-holder">
-                    <div id="status-lcd" class="led led-off" hx-get="/htmx/status" hx-trigger="load" hx-swap="outerHTML">
-                        88888888888888
+        <main>
+            <div class="branding">CLABRETRO CABLE INC.</div>
+            <section class="rack">
+                <article class="appliance">
+                    <div class="logo" hx-get="/htmx/meta" hx-swap="innerHTML" hx-trigger="load">
                     </div>
-                </div>
-                <div id="play-next">
-                    <button hx-put="/htmx/live/next" hx-swap="none" class="metal linear small">></button>
-                </div>
-            </article>
-        </section>
+                    <div id="status-holder">
+                        <div id="status-lcd" class="led led-off" hx-get="/htmx/status" hx-trigger="load" hx-swap="outerHTML">
+                            88888888888888
+                        </div>
+                    </div>
+                    <div id="play-next">
+                        <button hx-put="/htmx/live/next" hx-swap="none" class="metal linear small">></button>
+                    </div>
+                </article>
+            </section>
+        </main>
     </body>
 </html>
