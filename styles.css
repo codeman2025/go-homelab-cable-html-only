@@ -378,7 +378,7 @@ div#status-lcd > span {
     padding: 16px 0;
     border-radius: 8px;
     text-align: center;
-    margin: 40px 0 24px 0; /* 40px from top, 24px below */
+    margin: 50px 0 24px 0; /* 40px from top, 24px below */
     box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 }
